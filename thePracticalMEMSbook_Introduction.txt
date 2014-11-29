@@ -1,0 +1,734 @@
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 1 — #17
+
+i
+
+i
+
+1
+
+Introduction
+
+Microelectromechanical systems (MEMS) is a loosely deﬁned term for man-
+made mechanical components that are characterized by small size. Translated
+literally, MEMS should have dimensions in the micron-scale and have both
+electrical and mechanical components that form a system. Many MEMS devices
+do not meet these requirements. For example, microﬂuidic channels may not
+have any electrical components. In Europe, MEMS is often called microsystems.
+This term may be more accurate but MEMS is more catchy and is used in United
+States, Asia, and increasingly in Europe.
+
+While the exact deﬁnition of MEMS is diﬃcult to formalize, most peo-
+ple agree on the idea of MEMS. Typically, the MEMS device introduces a
+paradigm shift in manufacturing and/or application. For example, miniature
+silicon accelerometers have largely replaced the costly macroscopic piezoelectric
+accelerometers. The MEMS accelerometers are smaller, but their real advantage
+is the manufacturing process that utilizes the batch fabrication processes origi-
+nally developed for the integrated circuit technology. Batch fabrication enables
+simultaneous processing of thousands of identical devices on a single wafer.
+This is in contrast to the traditional series manufacturing one device at the
+time. Batch fabrication has made the accelerometers economical, and with the
+lower cost of silicon accelerometers, the use of inertial sensors has widened ﬁrst
+in the automotive industry and more recently in the consumer market.
+
+In addition to providing a cheaper and/or better alternative to the existing
+technology, MEMS has enabled completely new devices: Inkjet print heads have
+made low-cost color printing a reality. Micromirror arrays containing more than
+one million individual mirrors were developed for high deﬁnition television, and
+are used in data projectors in oﬃces, classrooms, auditoriums, and in homes
+for video games and home theaters.
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 2 — #18
+
+i
+
+i
+
+2
+
+INTRODUCTION
+
+1.2
+
+This chapter gives an overview of the MEMS industry, the history, the type
+of devices on market, and the fabrication methods used to make them. The
+overview will pave the way for the detailed device studies in the subsequent
+chapters.
+
+1.1 History of MEMS
+
+The history of micromachining is tied to the development of integrated circuit
+(IC) technology. Starting in the 1960s, researchers experimented with using IC
+fabrication technologies (for example lithography, silicon etching, and thin ﬁlm
+growth) to make mechanical structures. Some of the early devices such as the
+resonant gate transistor [1] were not commercially successful but the work lead
+to a commercial adoption of pressure sensors and accelerometers in the 1970s.
+Many of the early processes and applications are documented in the classical
+paper by Petersen [2].
+
+The signiﬁcant research and development eﬀort in the 1980s and 1990s have
+lead to new fabrication technologies, devices, and markets for MEMS. Notably,
+surface micromachining has enabled integration of mechanical components with
+the integrated circuits leading to low cost accelerometers and micromirror ar-
+rays. Commercialization of the MEMS technologies has ﬁnally started to impact
+society on a larger scale. Today, most consumers have, knowingly or unknow-
+ingly, encountered MEMS based products.
+
+Building on the technological advancements, MEMS market is currently
+growing by all measures. The number of MEMS devices sold is increasing and
+new products are coming out every year. Devices such as microphones that once
+looked too expensive to implement with microfabrication technologies are sold
+by millions [3]. While the future for the MEMS is bright, it remains to be seen
+whether the technology will saturate or if new manufacturing processes and
+applications will be invented to further drive the development.
+
+1.2 MEMS applications are diverse
+
+The MEMS market size is currently over $6B per year, but as shown in Fig-
+ure 1.1, only a few devices are genuinely mass produced. The oldest application,
+pressure sensors, commands revenue of over $500M per year. As the price and
+size of pressure sensors keep decreasing, new applications emerge. For example,
+integration of pressure sensors inside hypothermic needles [4] or sport watch is
+possible due to minute size of MEMS pressure sensors.
+
+The other major sensor market, the inertial sensors, has historically been
+dominated by the automotive industry. Recently, the reduction in price has en-
+abled adoption of MEMS accelerometers in consumer devices such as orientation
+sensors in digital cameras and game console user interfaces. Gyroscopes have
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 3 — #19
+
+i
+
+i
+
+1.2
+
+MEMS APPLICATIONS ARE DIVERSE
+
+3
+
+Emerging applications:
+
+• RF resonators
+• RF switches
+• Lab-on-a-chip
+• Drug delivery systems
+• Optical switches
+• Microspectrometers
+
+Figure 1.1: The MEMS market is dominated by few applications all generating rev-
+enues over $500M/year. Emerging device ﬁelds currently generate revenue less than
+$100M/year but show huge growth potentials.
+
+also entered into mass production and show double-digit growth in revenue.
+The main markets for the gyroscopes are the automotive industry, inertial nav-
+igation to aid GPS, and image stabilization for digital cameras. It is expected
+that the gyroscopes will also be utilized to enhance the human-computer user
+interface.
+
+For average consumers, the inkjet print heads may be the most familiar mi-
+crodevice. Each replacement inkjet cartridge has a micromachined inkjet nozzle
+head. The inkjet print heads are frequently regarded as the largest MEMS mar-
+ket in terms of revenue. However, as the inkjet manufacturers sell the MEMS
+component as a part of the printer system, it is diﬃcult to attach an accurate
+dollar value to the MEMS component portion of the inkjet market. Regardless,
+the inkjet revenue is measured in hundreds of millions.
+
+The lucrative digital microdisplay (DMD) market is dominated by a single
+manufacturer, Texas Instruments, who holds the key patents in the ﬁeld. In
+projection displays, the high contrast ratio of mechanically actuated mirrors
+enables the micromirrors to compete against the more common LCD technology.
+The MEMS displays are a unique MEMS product in that they contain millions
+of moving structures. Fabrication on this scale would not be possible without
+batch fabrication methods.
+
+Another more recent display product is the reﬂection based display for
+portable devices introduced by Qualcomm. The device is based on interfer-
+ometry, and unlike LCD displays, it does not require any back light. Other
+optical MEMS devices, such as switches for ﬁber optical communications, hold
+promise but may take several years to gain acceptance.
+
+Silicon microphones are the latest entry to the mass market. The growth is
+driven by cell phone industry that demands solderability – a characteristic not
+met by otherwise excellent traditional electret microphones. The microphones
+are an encouraging example of a MEMS product that only a few years ago was
+deemed too expensive but is now rapidly gaining market share.
+
+Beyond these established markets, a number of MEMS devices hold promise.
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 4 — #20
+
+i
+
+i
+
+4
+
+INTRODUCTION
+
+1.3
+
+The optical switches were regarded the next killer application but the collapse
+of several network companies in 2001-2002 has dampened the interest in optical
+networking. Radio frequency (RF) switches is an interesting application as mi-
+cromechanical switches oﬀer performance advantages over solid-state devices.
+Currently, the MEMS switches are considered for radars and test equipment
+where the high performance is needed. Adoption by the cell phone industry
+appears likely but lifetime and cost issues remain. The low cost and the small
+size of RF microresonators have also raised interest. This market is attractive
+as the revenue is high, but in terms of power handling and signal-to-noise ratio,
+the miniature resonators are not as robust as the established macroscopic res-
+onators. Biomedical devices are appealing, as the small size naturally interfaces
+well with biological systems. It remains to be seen whether these or some other
+application will break the $100M barrier.
+
+1.3 MEMS fabrication is based on batch processing
+
+Microfabrication has historically been tied to integrated circuit (IC) fabrication
+and most of the processing tools and terminology have been adopted directly
+from IC manufacturing. The parallels are so deep that sometimes a retiring IC
+manufacturing plant is converted to MEMS fabrication that does not require
+the latest fabrication technology. But the MEMS fabrication technology is not
+easy to master. The MEMS speciﬁc challenges include packaging of movable
+mechanical structures, manufacturing of thick structures, and obtaining good
+absolute dimensional control.
+
+The focus of this book is on device design but some exposure to fabrication
+technologies is necessary in order to understand the limitations of the tech-
+nology. In other words, the understanding of the fabrication is not required to
+explain how a particular MEMS device operates but it explains why the device
+looks the way it does. The overview given here is enough to explain the general
+fabrication steps for the devices covered in this book. To supplement the fab-
+rication overview in this book, there are a number of good introductory [5–8]
+and advanced [9,10] books about microfabrication. In addition, microfabrication
+has been reviewed in several journal papers that provide concise introduction
+to the ﬁeld [2, 3, 11, 12]. These books and review papers combined with the
+large choice of IC fabrication textbooks [7, 13, 14], provide a solid foundation
+for micromanufacturing and process integration.
+
+The batch fabrication is a radical departure from the traditional series man-
+ufacturing, and is well suited for making relatively simple, mechanical compo-
+nents on a large scale. As illustrated in Figure 1.2, individual devices are pho-
+tolithographically deﬁned onto a wafer using a photomask and ultraviolet light.
+The batch fabrication process, speciﬁcally the use of photolithography, allows
+the deﬁning of any shape on the surface of the wafer but it is diﬃcult to fab-
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 5 — #21
+
+i
+
+i
+
+1.3
+
+MEMS FABRICATION IS BASED ON BATCH PROCESSING
+
+5
+
+Figure 1.2: An illustration of the batch fabrication. Thousands of components can
+simultaneously be deﬁned on a single wafer using photolithography.
+
+ricate truly three-dimensional shapes. The process can be compared to carving
+shapes out of cardboard. Due to fabrication limitations, the MEMS components
+often look ﬂat or two-dimensional.
+
+The cost for processing the MEMS wafer does not depend on the number
+of devices on it and the batch fabrication is an economical way to make a large
+number of devices. On a typical wafer, there can be thousands of devices and
+even a small MEMS foundry can fabricate components by millions. Once all the
+processing steps have been completed, the wafer is diced into individual pieces
+or dies. Finally, the dies are packaged, often together with an IC.
+
+Numerous MEMS fabrication processes have been developed. Traditionally,
+the MEMS processes have been divided into surface micromachining and bulk
+micromachining. We will review these two technologies in the following sections.
+
+1.3.1 Surface micromachining makes thin structures
+
+Surface micromachining is based on patterning thin-ﬁlms on top of a substrate
+wafer [11]. The surface micromachined structures are relatively ﬂat which sim-
+pliﬁes the subsequent wafer processing. A typical fabrication process is illus-
+trated in Figure 1.3 where steps of thin-ﬁlm deposition followed by selective
+etching are repeated to form semi-3D structures. The thickness of each layer
+may vary but it is typically less than 5 µm. The simplest structures, such as
+accelerometers, have two structural layers and one sacriﬁcial layer as shown
+in Figure 1.3. The record in complexity is the ﬁve structural layer process by
+Sandia National Laboratories that was developed for complex moving devices
+(microengines and gears) [15].
+
+The surface micromachining resembles the traditional IC manufacturing
+that is also based on processing thin-ﬁlms on a silicon wafer. The compatibility
+with the IC processing is one of the main advantages of surface micromachining,
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 6 — #22
+
+i
+
+i
+
+6
+
+INTRODUCTION
+
+1.3
+
+(a) Surface micromachin-
+ing starts with a substrate
+wafer, typically silicon with
+diameter of 100-200 mm and
+thickness of 500-700 µm.
+
+(b) A sacriﬁcial layer is de-
+posited or grown on the
+wafer. Silicon dioxide with
+thickness of 1-2 µm is com-
+monly used.
+
+(c) A hole is made by lithog-
+raphy and etching of the
+sacriﬁcial layer. The small-
+est dimensions are usually 2-
+3 µm.
+
+(d) A structural layer, typi-
+cally 1-5 µm polycrystalline
+silicon is deposited.
+
+(e) The structural
+layer is
+deﬁned using lithography
+and etching.
+
+(f) The structure is released
+by removing the sacriﬁcial
+layer by etching.
+
+Figure 1.3: Typical surface micromachining process involves combinations of layer
+depositions, optical lithography, and etches to fabricate thin microstructures.
+
+as it is relatively easy to integrate surface micromachining with IC:s to combine
+mechanical and electrical components on the same chip. The single-chip inte-
+gration may lead to better performance and reduced packaging cost especially
+if a large number of connections between the mechanical and electrical parts
+are needed. For example, the realization of micromirror arrays with more than
+a million individually controlled mirrors would not be possible without on-chip
+control for the individual mirrors.
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 7 — #23
+
+i
+
+i
+
+1.4
+
+MEMS FABRICATION IS BASED ON BATCH PROCESSING
+
+7
+
+1.3.2 Bulk micromachining makes thick structures
+
+Unlike surface micromachining, which is based on thin-ﬁlm deposition on top of
+a substrate wafer, bulk micromachining deﬁnes structures by selectively etching
+the substrate [12]. This can result in relatively thick structures; the typical
+wafer thickness of 500-700 µm is about 100 times the typical thickness for
+surface micromachines. The large thickness is useful, for example, in inertial
+sensors that beneﬁt from a large mass. In addition to the thickness, the bulk
+micromachined structures can be made of single-crystal silicon as opposed to
+amorphous or polycrystalline thin-ﬁlms. The predictable and stable material
+parameters of crystalline silicon are desirable for mechanical sensors.
+
+Bulk micromachined accelerometers and pressure sensors were the ﬁrst com-
+mercialized MEMS products. These devices have been hugely successful, for
+example, MEMS pressure sensors represent over 90% of all sold pressure sensor
+units [3]. Early bulk micromachined devices were made by wet etching [16] and
+several exotic processes have been developed. For example, thin membranes for
+pressure sensors have been deﬁned using epitaxial growth of silicon combined
+with electrochemical etch stop [2]. The wet processes are still used but ad-
+vances in plasma processing have made dry etching the mainstream. Especially
+the combination of deep reactive ion etching (DRIE) and silicon on insulator
+(SOI) technology has simpliﬁed the bulk manufacturing and reduced the device
+size [17–19].
+
+DRIE enables etching narrow channels through the entire wafer and results
+in almost vertical sidewalls. It is possible to make channels with aspect ratio
+of 50 to 1 or better, meaning that a 500 µm deep trench can be only 10 µm
+wide. In contrast to the wet etching where the depth and width of a trench
+are typically equal, the reduction of device size can be signiﬁcant and more
+devices are obtained from a single wafer. As the cost of processing one wafer
+is approximately constant, the smaller device size directly reduces the device
+cost.
+
+Figure 1.4 shows a possible process to make accelerometers using SOI wafers,
+DRIE etching, and wafer bonding. The ﬁnal structure is hermetically sealed at
+the wafer level, which greatly reduces the cost of ﬁnal assembly and packaging.
+The manufacturing process is quite straightforward and results in a compact
+structure with well-deﬁned features.
+
+The SOI wafers used in MEMS are manufactured by bonding two silicon
+wafers together with a 1-2 µm layer of silicon dioxide in between them. The
+silicon dioxide acts as a natural etch stop and all etched structures have the
+desired thickness determined by the SOI thickness. The silicon dioxide can also
+be used as a sacriﬁcial layer for making free structures of single-crystal silicon.
+As two silicon wafers are used for making one SOI wafer, the SOI wafers are
+more expensive than bare silicon wafers. However, the material cost increase is
+compensated by the processing costs savings.
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 8 — #24
+
+i
+
+i
+
+8
+
+INTRODUCTION
+
+1.4
+
+(a) The process is started
+with a SOI wafer with
+substrate thickness of 550-
+650 µm and SOI thickness
+of 10-20 µm.
+
+(b) A 2 µm recess is etched
+on front and back to deﬁne
+where movable structure is.
+
+(c) Trenches are etched us-
+ing DRIE on the back of the
+wafer to deﬁne the sensing
+mass. The oxide stops the
+etch.
+
+(d) Final DRIE on the front
+of the wafer deﬁnes the sup-
+porting beams that hold the
+mass.
+
+(e) The device is completed by bonding wafers on
+front and back to make a hermetically shielded ac-
+celerometer. After dicing, the dies are ready for ﬁnal
+assembly.
+
+Figure 1.4: Bulk micromachining process for making a silicon accelerometer.
+
+1.4 Introduction to the Practical MEMS book
+
+This book is focused on in-depth analysis of microdevice operation. The em-
+phasis sets the Practical MEMS book apart from other MEMS books that cover
+both the fabrication and device operation. The integrated approach of includ-
+ing both fabrication and analysis has merits and an integrated textbook is a
+good ﬁrst introduction to the microsystems. However, the depth of analysis in
+textbooks that cover both fabrication and applications is limited to describing
+the device operation.
+
+This book goes further into exploring why certain devices are successful and
+others have failed. The ﬁrst part of this book covers the traditional microsensors
+(accelerometers and pressure sensors) that are a major and growing commercial
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 9 — #25
+
+i
+
+i
+
+1.4
+
+INTRODUCTION TO THE PRACTICAL MEMS BOOK
+
+9
+
+microsystem application. The emphasis is on measuring small signals that is
+a fundamental challenge when making small sensor systems. Since ability to
+do simpliﬁed analytical design analysis is invaluable in the early stage of any
+sensor design, the physical principles behind the sensor operation are illustrated
+by numerous calculated examples. These examples are carefully chosen to both
+illuminate the device operation and to quantify the performance trade-oﬀs in
+the microsensors.
+
+The second half of the book introduces actuators. The merits of diﬀerent
+actuation schemes are illustrated by developing scaling laws for diﬀerent actu-
+ation schemes. Capacitive, thermal, piezoelectric actuation theory is developed
+and illustrated with examples. Applications ranging from optical, RF, and sens-
+ing (gyroscopes) are explored with emphasis on critical evaluation of whether
+MEMS has a competitive advantage to replace the current technologies. Again,
+the physical challenges of miniaturization are illustrated with several calculated
+examples. For example, the eﬀect of mirror size is studied in optical MEMS ap-
+plications such as optical displays and microscanners.
+
+Finally, the book is concluded with an introduction to MEMS fabrication
+economics. The cost, yield, and proﬁts in batch fabrication are investigated.
+Several case studies are used to illustrate the challenges of making a proﬁt with
+microfabrication.
+
+Key concepts
+
+• MEMS stands for microelectromechanical system. Europeans prefer the
+
+shorter and often more accurate word microsystem.
+
+• Microdevices have been developed since the 1960s. Since the 1990s, the
+
+ﬁeld has been growing rapidly.
+
+• Pressure sensors, accelerometers, optical displays, and inkjet printers are
+
+established commercial MEMS applications.
+
+• Optical networking and RF MEMS hold commercial promise but have
+
+not yet become signiﬁcant industry.
+
+• Batch fabrication enables fabrication of thousands or even millions of
+
+identical mechanical components on a single wafer
+
+• Optical lithography is used to deﬁne the shape of the structures. Large
+
+number of devices can be made using the same optical mask.
+
+• Surface micromachining is based on processing and patterning thin-ﬁlms
+
+on a wafer.
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 10 — #26
+
+i
+
+i
+
+10
+
+INTRODUCTION
+
+1.4
+
+• Bulk micromachining is based on etching the wafer to make relatively
+
+thick structures.
+
+Exercises
+
+Exercise 1.1
+Download or copy from the library the classical review paper from 1982 by
+Petersen [2] and recent review by Bryzek et al. [3] and answer to the following
+questions: 1. How does the MEMS fabrication processes in the papers diﬀer? 2.
+List applications that are highlighted in papers. How does applications in the
+two papers diﬀer and is this diﬀerence reﬂected in manufacturing processes?
+Exercise 1.2
+Using your favorite search engine, ﬁnd at least three estimates for the world
+wide MEMS market size. Comment on how reliable you feel the sources are and
+whether there is discrepancy between the estimates.
+Exercise 1.3
+Using your favorite search engine, ﬁnd an estimate of the world wide market
+size for integrated circuits (ICs) and compare it to the MEMS market size.
+Noting that silicon microcircuits and silicon microsensors were invented around
+the same time in the 1960s, think of reasons that could explain the diﬀerence
+in the market size.
+Exercise 1.4
+Why surface micromachining is more compatible with integrated circuit fabri-
+cation than bulk micromachining?
+Exercise 1.5
+List MEMS applications that you have personally encountered.
+Exercise 1.6
+Why optical lithography is important in microfacrication?
+Exercise 1.7
+The number of citations is a relatively objective way to judge the importance
+of academic publications. Most publications are cited less than ten times, the
+papers that resonate well with the academic community will be cited more than
+30 times, and seminal papers receive over a hundred citations.
+
+Google Scholar (scholar.google.com) is a free tool to search scholarly
+literature. Google Scholar will also give an estimate of the number of citations
+for each search result has received. The more cited articles will have a higher
+ranking and will appear ﬁrst. For example, search “RF MEMS” will display
+the article by C. Goldsmith, et al. titled “Performance of low-loss RF MEMS
+capacitive switches,” that has been cited more than 200 times.
+
+Try out Google Scholar to ﬁnd a highly cited journal paper on: i. MEMS
+accelerometer, ii. MEMS pressure sensor, iii. MEMS gyroscope, iv. RF MEMS
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+“thePracticalMEMSbook” — 2009/2/18 — 10:29 — page 11 — #27
+
+i
+
+i
+
+1.4
+
+INTRODUCTION TO THE PRACTICAL MEMS BOOK
+
+11
+
+switch, v. optical MEMS, vi. MEMS microphone, and vii. MEMS inkjet print
+head. Note the number of citations manuscripts in diﬀerent applications have
+received and compare the search results. How does the importance to the aca-
+demic community correlate with the commercial interest? Note that in old ap-
+plications such as accelerometers the word MEMS may not appear in the article.
+Other relevant keywords include silicon and solid-state.
+
+Copyright Ville Kaajakari (ville@kaajakari.net)
+Downloaded from: www.kaajakari.net/PracticalMEMS
+
+i
+
+i
+
+i
+
+i
+
+
